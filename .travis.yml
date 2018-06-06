@@ -1,0 +1,38 @@
+language: node_js
+node_js: stable
+
+addons:
+    apt:
+      update: true
+
+cache:
+  directories:
+    - node_modules
+
+install:
+  - npm install
+
+before_script:
+  - git submodule update --remote --merge
+
+script:
+  - hexo clean
+  - hexo g
+
+after_script:
+  - cd ./public
+  - git init
+  - git config user.name "Denley Hsiao"
+  - git config user.email "denley@justtodo.com"
+  - git add .
+  - git commit -m "Travis CI Auto Builder"
+  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
+
+branches:
+  only:
+    - blog
+
+env:
+  global:
+    - GH_REF: github.com/denleyhsiao/denleyhsiao.github.io.git
+    - secure: kmUplDpDYU19p9Q7TeXaeFA1LLk7jb3z4fWwIeXrP1mf7d+43S3RWCVIUPFdOkR52X4MhmEJiDgS6Q9LRrEvkmQAyVEqF1XN3LwM8UCCOthkydjPtYeWaaRbG4LFnURJjlF7mpHoi1hQfmUUq3l6eZJGL9Te4jYdKRkv0eLeUlZVUqgV5Z7xKEmEUA0dypmJ2SR2DiNtHrmk64EYwqBwyZsOHndU/3TMfCSr/hXiviw2ZntAx+CHpyhj9Aqp8HRKtUbuRlPvFEa5XyfmaZbpqGRBcdZufQq3dqe+Km93M11N0NM9CjC/uxJybs7c4+vZr0EPEcHZI/KNnY/dcMJND8qhs4HiUkdsQxR/XoM7Tkdzt2B1N6zzycypgoX70boNQjQsg9nUmypgP0ActYQ5O6ozMDHH3B/I0+iIcVIklS+OcmyK71iRegBL/J1jaGiO5p4mfaCNmNuXJsAKiwjRmK2ACnC+8wqz2mW/eB1aX9A4hXM2N3SwQDMzwsiSXqVeCgrQGn4/t4qCPG4BSIt1HZ17Iep1qg2FjfuG71k32BGbQLuM90o39BBqwOIz03EXH3Cg+BXQz/Anu0UhaoaPeh48yLyfPr1hovTQCekrRLhSEfl0qV9/tkYgBHV/ETgcsS5nxYjsaWLj4OkCOqyAmT/PKF05T7Avllf7Ea11q4s=

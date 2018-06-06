@@ -1,0 +1,9 @@
+[submodule "themes/next"]
+	path = themes/next
+	url = https://git.justtodo.com/third_party/hexo-theme-next
+[submodule "themes/landscape"]
+	path = themes/landscape
+	url = https://git.justtodo.com/third_party/hexo-theme-landscape
+[submodule "themes/light_cn"]
+	path = themes/light_cn
+	url = https://git.justtodo.com/third_party/hexo-theme-light_cn
