@@ -2,8 +2,8 @@ language: node_js
 node_js: stable
 
 addons:
-    apt:
-      update: true
+  apt:
+    update: true
 
 cache:
   directories:
@@ -26,7 +26,7 @@ after_script:
   - git config user.email "denley@justtodo.com"
   - git add .
   - git commit -m "Travis CI Auto Builder"
-  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
+  - git push --force --quiet "https://${GITHUB_TOKEN}@${GITHUB_REPO}" master:master
 
 branches:
   only:
@@ -34,5 +34,5 @@ branches:
 
 env:
   global:
-    - GH_REF: github.com/denleyhsiao/denleyhsiao.github.io.git
-    - secure: kmUplDpDYU19p9Q7TeXaeFA1LLk7jb3z4fWwIeXrP1mf7d+43S3RWCVIUPFdOkR52X4MhmEJiDgS6Q9LRrEvkmQAyVEqF1XN3LwM8UCCOthkydjPtYeWaaRbG4LFnURJjlF7mpHoi1hQfmUUq3l6eZJGL9Te4jYdKRkv0eLeUlZVUqgV5Z7xKEmEUA0dypmJ2SR2DiNtHrmk64EYwqBwyZsOHndU/3TMfCSr/hXiviw2ZntAx+CHpyhj9Aqp8HRKtUbuRlPvFEa5XyfmaZbpqGRBcdZufQq3dqe+Km93M11N0NM9CjC/uxJybs7c4+vZr0EPEcHZI/KNnY/dcMJND8qhs4HiUkdsQxR/XoM7Tkdzt2B1N6zzycypgoX70boNQjQsg9nUmypgP0ActYQ5O6ozMDHH3B/I0+iIcVIklS+OcmyK71iRegBL/J1jaGiO5p4mfaCNmNuXJsAKiwjRmK2ACnC+8wqz2mW/eB1aX9A4hXM2N3SwQDMzwsiSXqVeCgrQGn4/t4qCPG4BSIt1HZ17Iep1qg2FjfuG71k32BGbQLuM90o39BBqwOIz03EXH3Cg+BXQz/Anu0UhaoaPeh48yLyfPr1hovTQCekrRLhSEfl0qV9/tkYgBHV/ETgcsS5nxYjsaWLj4OkCOqyAmT/PKF05T7Avllf7Ea11q4s=
+    - GITHUB_REPO: github.com/denleyhsiao/denleyhsiao.github.io.git
+    - secure: CdJyYn/4AImCApwTz/xTMdcY+OKvv9qkzaBoq4x2qIfa452bKu7TiMudVp9FrMmT5F5pUQ8np3EhCRZ+JpeFr4R44Mm5kcu/hvc9neilDV8V+AX0GaPV/ntbMLTJMTnH3XycH/bhKEYxJX70/q6oqaMEEI9wcO2isEg2XGp2mJu9i7de+6trgRjpfcXazMbOdwXHrhM/k3R4kCyVecDyzgcEroumuC1JGGpzOn4SLml8Xuk9l7wlTdkfKtoV9NbSK3/9oRsxcmtsQTai6/zlce121qlAXXyFGR47OSpHmKbk0dbDdhw9oAhUSdPOAwvAE13pA0Vtjn97OWVcdfjsSYyA8TCh/SE6GS+nHYD09SkzaJWNWRtfZyaefvHXvTVTx/EBdsXgOM45zeopnYYOLumgEt0jWMEDbPx41i7v4iT9ErfQ77xTWYPDW47HrPKrYp7DzfESzD8kpRHci0X8u0bcjS6kv0gD3XyktV9sEdeYHavMzahYLrJgJuz8FlmjgvDUM2/CMKFQ2tVNwYutbF+y9o3h3LvKEIYFjRx9WJBo2QQtDb8DymzftKyd/eue6W45nxwQ/QW1dn9/R6omOGjCcStvr6/ZcErGrTXjRgYPrFkJJSYvG0BMl+V5+GpO1j/+71svAHaBJaF+z83Jad8TUdT/gK3vaKEPp1b4EyE=
