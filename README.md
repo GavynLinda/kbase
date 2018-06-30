@@ -2,11 +2,6 @@
 
 [![Build Status][travis_image]][travis_url]
 
-## 创建
-1.  初始化：`hexo init`
-2.  合并source分支
-3.  自定义source内容
-
 ## 配置
 在`_config.yml`文件中，修改`language`和`theme`为相应的值，具体如下
 
