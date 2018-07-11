@@ -24,19 +24,19 @@ deploy:
   skip-cleanup: true
   github-token: $GITHUB_TOKEN
   local-dir: public
-  repo: denleyhsiao/denleyhsiao.github.io
+  repo: <blog_user_name>/<blog_user_name>.github.io
   target-branch: master
-  fqdn: blog.justtodo.com
-  project-name: denleyhsiao.github.io
+  fqdn: <blog_name>.justtodo.com
+  project-name: <blog_user_name>.github.io
   committer-from-gh: true
   keep-history: false
   on:
-    branch: blog
+    branch: <blog_branch>
 
 branches:
   only:
-    - blog
+    - <blog_branch>
 
 env:
   global:
-    - secure: CdJyYn/4AImCApwTz/xTMdcY+OKvv9qkzaBoq4x2qIfa452bKu7TiMudVp9FrMmT5F5pUQ8np3EhCRZ+JpeFr4R44Mm5kcu/hvc9neilDV8V+AX0GaPV/ntbMLTJMTnH3XycH/bhKEYxJX70/q6oqaMEEI9wcO2isEg2XGp2mJu9i7de+6trgRjpfcXazMbOdwXHrhM/k3R4kCyVecDyzgcEroumuC1JGGpzOn4SLml8Xuk9l7wlTdkfKtoV9NbSK3/9oRsxcmtsQTai6/zlce121qlAXXyFGR47OSpHmKbk0dbDdhw9oAhUSdPOAwvAE13pA0Vtjn97OWVcdfjsSYyA8TCh/SE6GS+nHYD09SkzaJWNWRtfZyaefvHXvTVTx/EBdsXgOM45zeopnYYOLumgEt0jWMEDbPx41i7v4iT9ErfQ77xTWYPDW47HrPKrYp7DzfESzD8kpRHci0X8u0bcjS6kv0gD3XyktV9sEdeYHavMzahYLrJgJuz8FlmjgvDUM2/CMKFQ2tVNwYutbF+y9o3h3LvKEIYFjRx9WJBo2QQtDb8DymzftKyd/eue6W45nxwQ/QW1dn9/R6omOGjCcStvr6/ZcErGrTXjRgYPrFkJJSYvG0BMl+V5+GpO1j/+71svAHaBJaF+z83Jad8TUdT/gK3vaKEPp1b4EyE=
+    - secure: <blog_secure>
