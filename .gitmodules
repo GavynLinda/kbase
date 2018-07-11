@@ -7,3 +7,4 @@
 [submodule "themes/light_cn"]
 	path = themes/light_cn
 	url = https://github.com/denleysay/hexo-theme-light_cn
+  branch = denleyhsiao_blog
